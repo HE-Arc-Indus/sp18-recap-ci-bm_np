@@ -23,3 +23,12 @@
 5) Créez un jenkinsfile pour l’intégration continue de votre projet.
 6) Créez un projet jenkins de type pipeline pour l’intégration continue de votre projet
 7) Réalisez le KATA FizzBuzz
+
+## Etapes
+
+1) Initialiser le répo git avec readme, gitignore, projet vide, fichier pom configuré correctement, etc.
+2) Créer un dockerfile -> Décrit l'image
+3) Construire l'image (faire un build) --> docker build -t monimage .
+3) Lancer le container docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home monimage
+   --> Instancie un container avec l'image (Si n'existe pas, télécharge l'image de jenkins)
+
