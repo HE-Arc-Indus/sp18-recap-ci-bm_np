@@ -26,9 +26,17 @@
 
 ## Etapes
 
-1) Initialiser le répo git avec readme, gitignore, projet vide, fichier pom configuré correctement, etc.
-2) Créer un dockerfile -> Décrit l'image
-3) Construire l'image (faire un build) --> docker build -t monimage .
-3) Lancer le container docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home monimage
+- Initialiser le répo git avec readme, gitignore, projet vide, fichier pom configuré correctement, etc.
+- Créer un dockerfile -> Décrit l'image
+- Se déplacer à l'endroit du fichier via docker : cd C:/Users/normand.paratte/Documents/IdeaProjects/indus/sp18-recap-ci-bm_np
+- Construire l'image (faire un build) --> docker build -t monimage . (ex: monimage -> jenkins_image)
+- Lancer le container docker run -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home monimage
    --> Instancie un container avec l'image (Si n'existe pas, télécharge l'image de jenkins)
+- Se connecter à jenkins depuis un navigateur à l'adresse de docker (dans notre cas 192.168.99.100/8080) :
+  - Pour le débloquer, il faut copier le mot de passe depuis la console (il se peut que ce dernier ne soit pas affiché)
+  - Si le mot de passe n'est pas affiché dans la console, il faut aller le récupérer sur la machine lancée :
+    - Dans une invite de commandes Windows, voir les images lancées avec **docker ps**
+	- Ouvrir une commande bash sur la machine souhaitée avec ** docker exec -it [containerID] bash**
+	- Récupérer le mot de passe dans le fichier **/var/nomVolume/secrets/initialAdminPassword** 
+		à l'aide de la commande **cat** (attention, il n'y a pas vim ni nano par défaut)
 
