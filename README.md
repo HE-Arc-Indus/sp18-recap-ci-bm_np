@@ -46,6 +46,7 @@
 	- Créer un projet pipeline
 	- Ajouter l'URL github (dans notre cas https://github.com/HE-Arc-Indus/sp18-recap-ci-bm_np)
 	- Créer un Jenkinsfile (Attention au nom et à la casse !)
+	- Dans les configurations tools (http://192.168.99.100:8080/configureTools/), ajouter la bonne version de maven, jdk, etc.
 	- Normalement le build devrait se lancer automatiquement lors d'un POST depuis github (webbook), cependant la machine jenkins étant en local, il faut lancer les builds à la main pour l'exercice
 	
 ## Informations importantes
