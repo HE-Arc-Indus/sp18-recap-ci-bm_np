@@ -49,7 +49,7 @@
 	- Normalement le build devrait se lancer automatiquement lors d'un POST depuis github (webbook), cependant la machine jenkins étant en local, il faut lancer les builds à la main pour l'exercice
 	
 ## Informations importantes
-Utilisateur admin :
+ - Utilisateur admin :
 	- Nom d'utilisateur : normand.paratte
 	- Mot de passe : normand.paratte
 	
