@@ -39,4 +39,17 @@
 	- Ouvrir une commande bash sur la machine souhaitée avec ** docker exec -it [containerID] bash**
 	- Récupérer le mot de passe dans le fichier **/var/nomVolume/secrets/initialAdminPassword** 
 		à l'aide de la commande **cat** (attention, il n'y a pas vim ni nano par défaut)
-
+- Initialiser Jenkins :
+	- Installer les modules
+	- Créer le ou les utilisateurs
+- Configurer Jenkins :
+	- Créer un projet pipeline
+	- Ajouter l'URL github (dans notre cas https://github.com/HE-Arc-Indus/sp18-recap-ci-bm_np)
+	- Créer un Jenkinsfile (Attention au nom et à la casse !)
+	- Normalement le build devrait se lancer automatiquement lors d'un POST depuis github (webbook), cependant la machine jenkins étant en local, il faut lancer les builds à la main pour l'exercice
+	
+## Informations importantes
+Utilisateur admin :
+	- Nom d'utilisateur : normand.paratte
+	- Mot de passe : normand.paratte
+	
